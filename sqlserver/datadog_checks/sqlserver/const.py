@@ -103,7 +103,9 @@ INSTANCE_METRICS = [
     # SQLServer:Locks
     ('sqlserver.stats.lock_waits', 'Lock Waits/sec', '_Total'),  # BULK_COUNT
     ('sqlserver.latches.latch_waits', 'Latch Waits/sec', ''),  # BULK_COUNT
-    ('sqlserver.latches.latch_wait_time', 'Average Latch Wait Time (ms)', ''),  # BULK_COUNT
+    # TODO: this isn't showing anything on sqlserver 2022?
+    ('sqlserver.latches.avg_latch_wait_time', 'Average Latch Wait Time (ms)', ''),  # BULK_COUNT
+    ('sqlserver.latches.total_latch_wait_time', 'Total Latch Wait Time (ms)', ''),  # BULK_COUNT
     ('sqlserver.locks.deadlocks', 'Number of Deadlocks/sec', '_Total'),  # BULK_COUNT
     # SQLServer:Plan Cache
     ('sqlserver.cache.object_counts', 'Cache Object Counts', '_Total'),
